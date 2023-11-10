@@ -1,0 +1,12 @@
+
+  File "Example_05.py", line 16
+    print(f'How many World Series has the {baseballTeam.title()} won.')
+                                                                      ^
+IndentationError: unindent does not match any outer indentation level
+
+E:\School\01_CSD_205_Python\_New_New_Module_04\Video_01>python Example_06.py
+  File "Example_06.py", line 3
+    print('cardinals')
+    ^
+IndentationError: unexpected indent
+

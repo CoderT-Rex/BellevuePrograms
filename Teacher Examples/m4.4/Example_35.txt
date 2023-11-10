@@ -1,0 +1,5 @@
+
+('cardinals', 'tigers', 'red sox')
+('red sox', 'rangers', 'astros', 'white sox')
+('cardinals',)
+cardinals

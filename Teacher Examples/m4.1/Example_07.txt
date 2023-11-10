@@ -1,0 +1,5 @@
+
+  File "Example_07.py", line 5
+    for baseballTeam in baseballTeams
+                                    ^
+SyntaxError: invalid syntax

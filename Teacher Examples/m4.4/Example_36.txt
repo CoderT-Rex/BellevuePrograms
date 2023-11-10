@@ -1,0 +1,3 @@
+
+('red sox', 'rangers', 'astros', 'white sox')
+('cardinals', 'reds', 'braves', 'cubs')

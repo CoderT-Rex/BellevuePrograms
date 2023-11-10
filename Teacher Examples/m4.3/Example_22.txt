@@ -1,0 +1,23 @@
+
+cardinals, Cardinals, CARDINALS
+tigers, Tigers, TIGERS
+red sox, Red Sox, RED SOX
+rangers, Rangers, RANGERS
+------------------------------------------
+red sox, Red Sox, RED SOX
+rangers, Rangers, RANGERS
+------------------------------------------
+cardinals, Cardinals, CARDINALS
+tigers, Tigers, TIGERS
+red sox, Red Sox, RED SOX
+------------------------------------------
+rangers, Rangers, RANGERS
+astros, Astros, ASTROS
+white sox, White Sox, WHITE SOX
+cubs, Cubs, CUBS
+------------------------------------------
+red sox, Red Sox, RED SOX
+rangers, Rangers, RANGERS
+astros, Astros, ASTROS
+white sox, White Sox, WHITE SOX
+cubs, Cubs, CUBS

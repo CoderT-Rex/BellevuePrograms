@@ -1,0 +1,10 @@
+package jrex_module2_watertemperature;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

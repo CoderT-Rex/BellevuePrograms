@@ -1,0 +1,6 @@
+
+['cardinals', 'tigers', 'red sox', 'rangers']
+['red sox', 'rangers']
+['cardinals', 'tigers', 'red sox']
+['rangers', 'astros', 'white sox', 'cubs']
+['red sox', 'rangers', 'astros', 'white sox', 'cubs']

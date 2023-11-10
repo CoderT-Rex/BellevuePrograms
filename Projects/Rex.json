@@ -1,0 +1,427 @@
+{
+  "version": "2.0.9",
+  "summary": {
+    "title": "Secure Software Development ",
+    "owner": "Joshua T. Rex",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "CSD370",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.0.9",
+        "cells": [
+          {
+            "position": {
+              "x": 549.9999999999966,
+              "y": -4.999999999996646
+            },
+            "size": {
+              "width": 540,
+              "height": 340
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "CorpNet \nTrust Boundary"
+              }
+            },
+            "zIndex": -1,
+            "id": "c43e67ec-e844-4ac7-8c32-7f8ce728e98c",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "CorpNet \nTrust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 140,
+              "y": 110
+            },
+            "size": {
+              "width": 140,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Browser and\n ActiveX Plugins"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "id": "cc4561ee-b01d-4781-8957-315f660d80f3",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Browser and\n ActiveX Plugins",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 539,
+              "y": 110.00000000000009
+            },
+            "size": {
+              "width": 150,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Web Server"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "id": "efafe79c-689b-4b78-8509-a4e2d251d701",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 921,
+              "y": 109.99999999999994
+            },
+            "size": {
+              "width": 160,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "SQL Database"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "id": "82e58528-b640-4bfe-95f4-9959c5ccb11d",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL Database",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "30c925b7-ff4a-4fa6-94f4-f88fbfda4e3d",
+                  "title": "SQL Injection",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "SQL injection is a malicious attack where an attacker injects malicious SQL code into user inputs to manipulate the database. This can lead to unauthorized data access, data modification, and even database compromise.",
+                  "mitigation": "We mitigate SQL injection by using parameterized queries, prepared statements, and input validation. We ensure that all user inputs are properly sanitized and validated.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "8b1ae58c-b50c-4c57-9b21-8c5f154fb1de",
+                  "title": "Brute Force Attack",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "In a brute force attack, an attacker tries to gain unauthorized access to the SQL database by repeatedly trying different username and password combinations until they find the correct one.",
+                  "mitigation": "To mitigate we implement account lockout policies after a certain number of failed login attempts. Additionally, we require the use of strong, complex passwords and multi-factor authentication to enhance security.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "f7e848ed-5b8c-4499-8443-41a97fce5424",
+                  "title": "Denial of Service (DoS) Attacks",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "DoS attacks aim to overwhelm the web server and database with a high volume of requests, causing a service outage. This can disrupt legitimate user access.",
+                  "mitigation": "Implement rate limiting, traffic filtering, and monitoring systems to detect and mitigate DoS attacks. Use Content Delivery Networks (CDNs) to distribute traffic and absorb the load.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS ",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "faba54b9-fb00-4806-bf9c-c32382d7dfab",
+            "labels": [
+              "HTTPS "
+            ],
+            "source": {
+              "cell": "efafe79c-689b-4b78-8509-a4e2d251d701"
+            },
+            "target": {
+              "cell": "cc4561ee-b01d-4781-8957-315f660d80f3"
+            },
+            "vertices": [
+              {
+                "x": 420,
+                "y": 300
+              },
+              {
+                "x": 330,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "04364ef8-ad0b-4d6e-b9e9-0255eba55811",
+            "labels": [
+              "HTTPS"
+            ],
+            "source": {
+              "cell": "cc4561ee-b01d-4781-8957-315f660d80f3"
+            },
+            "target": {
+              "cell": "efafe79c-689b-4b78-8509-a4e2d251d701"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 130
+              },
+              {
+                "x": 350,
+                "y": 90
+              },
+              {
+                "x": 400,
+                "y": 60
+              },
+              {
+                "x": 440,
+                "y": 60
+              },
+              {
+                "x": 490,
+                "y": 90
+              },
+              {
+                "x": 530,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL Commands",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "166e27cb-6b7a-48d5-9685-c922c929ebec",
+            "labels": [
+              "SQL Commands"
+            ],
+            "source": {
+              "cell": "efafe79c-689b-4b78-8509-a4e2d251d701"
+            },
+            "target": {
+              "cell": "82e58528-b640-4bfe-95f4-9959c5ccb11d"
+            },
+            "vertices": [
+              {
+                "x": 800,
+                "y": 30
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "DB Responses",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "9056fa28-235f-475c-a989-085adfb570e8",
+            "labels": [
+              "DB Responses"
+            ],
+            "source": {
+              "cell": "82e58528-b640-4bfe-95f4-9959c5ccb11d"
+            },
+            "target": {
+              "cell": "efafe79c-689b-4b78-8509-a4e2d251d701"
+            },
+            "vertices": [
+              {
+                "x": 780,
+                "y": 300
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 5
+  }
+}

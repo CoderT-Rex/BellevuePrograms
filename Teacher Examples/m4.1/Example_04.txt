@@ -1,0 +1,27 @@
+
+I like the Cardinals team.
+How many World Series has the Cardinals won?
+
+I like the Tigers team.
+How many World Series has the Tigers won?
+
+I like the Red Sox team.
+How many World Series has the Red Sox won?
+
+----------End of Loop----------
+I like the Cardinals team.
+        How many World Series has the Cardinals won.
+
+I like the Tigers team.
+        How many World Series has the Tigers won.
+
+I like the Red Sox team.
+        How many World Series has the Red Sox won.
+
+----------End of Loop----------
+I like the Cardinals team.
+I like the Tigers team.
+I like the Red Sox team.
+        How many World Series has the Red Sox won.
+
+----------End of Loop----------
